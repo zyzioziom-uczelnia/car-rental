@@ -6,7 +6,7 @@ security:
     providers:
         fos_userbundle:
             id: fos_user.user_provider.username
-            
+
     firewalls:
         # disables authentication for assets and the profiler, adapt it according to your needs
         dev:
@@ -42,3 +42,4 @@ security:
         - { path: ^/register, role: IS_AUTHENTICATED_ANONYMOUSLY }
         - { path: ^/resetting, role: IS_AUTHENTICATED_ANONYMOUSLY }
         - { path: ^/admin/, role: ROLE_ADMIN }
+        - { path: ^/rent, role: ROLE_USER }
