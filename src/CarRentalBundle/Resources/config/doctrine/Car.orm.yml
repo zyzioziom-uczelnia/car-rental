@@ -1,0 +1,26 @@
+CarRentalBundle\Entity\Car:
+    type: entity
+    table: null
+    repositoryClass: CarRentalBundle\Repository\CarRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        name:
+            type: string
+            length: 255
+        type:
+            type: string
+            length: 255
+        color:
+            type: string
+            length: 255
+        photo:
+            type: string
+            length: 255
+        horsepower:
+            type: integer
+    lifecycleCallbacks: {  }
