@@ -18,14 +18,14 @@ create:
     path:     /create/{name}/{type}/{color}/{horsepower}/{photo}
     defaults: { _controller: CarRentalBundle:Car:create }
 
-index:
-    path:     /
+rentals:
+    path:     /rentals
     defaults: { _controller: CarRentalBundle:Rental:index }
 
 show:
-    path:     /show
+    path:     /rentals/{id}
     defaults: { _controller: CarRentalBundle:Rental:show }
 
 review:
-    path:     /review
+    path:     /rentals/review/{id}
     defaults: { _controller: CarRentalBundle:Rental:review }
