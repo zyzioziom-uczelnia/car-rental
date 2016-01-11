@@ -17,3 +17,15 @@ rent:
 create:
     path:     /create/{name}/{type}/{color}/{horsepower}/{photo}
     defaults: { _controller: CarRentalBundle:Car:create }
+
+index:
+    path:     /
+    defaults: { _controller: CarRentalBundle:Rental:index }
+
+show:
+    path:     /show
+    defaults: { _controller: CarRentalBundle:Rental:show }
+
+review:
+    path:     /review
+    defaults: { _controller: CarRentalBundle:Rental:review }
