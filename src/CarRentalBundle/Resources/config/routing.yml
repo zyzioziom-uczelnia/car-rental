@@ -1,0 +1,3 @@
+car_rental_homepage:
+    path:     /
+    defaults: { _controller: CarRentalBundle:Default:index }

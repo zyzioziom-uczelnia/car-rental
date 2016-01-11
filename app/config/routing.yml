@@ -1,3 +1,7 @@
+car_rental:
+    resource: "@CarRentalBundle/Resources/config/routing.yml"
+    prefix:   /
+
 app:
     resource: "@AppBundle/Controller/"
     type:     annotation
