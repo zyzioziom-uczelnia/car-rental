@@ -1,0 +1,29 @@
+CarRentalBundle\Entity\Rental:
+    type: entity
+    table: null
+    repositoryClass: CarRentalBundle\Repository\RentalRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        userId:
+            type: integer
+            column: user_id
+        carId:
+            type: integer
+            column: car_id
+        startDate:
+            type: date
+            column: start_date
+        endDate:
+            type: date
+            column: end_date
+        price:
+            type: integer
+        status:
+            type: string
+            length: 255
+    lifecycleCallbacks: {  }
