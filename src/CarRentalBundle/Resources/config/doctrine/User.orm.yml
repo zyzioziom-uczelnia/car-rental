@@ -1,6 +1,6 @@
 CarRentalBundle\Entity\User:
     type: entity
-    table: null
+    table: user
     repositoryClass: CarRentalBundle\Repository\UserRepository
     id:
         id:

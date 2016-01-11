@@ -2,15 +2,17 @@
 
 namespace CarRentalBundle\Entity;
 
+use FOS\UserBundle\Model\User as BaseUser;
+
 /**
  * User
  */
-class User
+class User extends BaseUser
 {
     /**
      * @var int
      */
-    private $id;
+    protected $id;
 
 
     /**
@@ -23,4 +25,3 @@ class User
         return $this->id;
     }
 }
-
