@@ -1,7 +1,97 @@
 {% extends "::base.html.twig" %}
 
-{% block title %}CarRentalBundle:Car:rent{% endblock %}
+{% block title %}Renting {{ car.color}} {{ car.name }}{% endblock %}
 
 {% block body %}
-<h1>Welcome to the Car:rent page</h1>
+<div class="row">
+  <div class="col s6">
+    <p>Available</p>
+  </div>
+  <div class="col s6">
+    <p>formularz wypożyczenia</p>
+  </div>
+</div>
+
+  <div class="row">
+    <div class="col s4"></div>
+    <div class="col s8">
+      <h3>Warunki wynajmu</h3>
+      <blockquote>
+        General Rental Information<br/>
+The renter and the driver have to be in possession of a valid driving license.
+Drivers also need an international driver's license, if he doesn't come of one of the following countries: Austria, Bahama Islands, Belarus, Belgium, Bosnia & Herzegovina, Brazil, Bulgaria, Croatia, Cuba, Czech Republic, Denmark, Estonia, Finland, France, Georgia, Germany, Great Britain, Greece, Guyana, Hungary, Italy, Ivory Coast, Kazakhstan, Korea, Kuwait, Latvia, Lithuania, Luxembourg, Macedonia, Moldavia, Monaco, Mongolia, Morocco, Netherlands, Nigeria, Norway, Pakistan, Romania, Russia, San Marino, Senegal, Slovakia, Slovenia, Spain, South Africa, Sweden, Switzerland, Tajikistan, Turkmenistan, Ukraine, Uruguay, Yugoslavia, Zaire, Zimbabwe.
+Driving license printed with non Roman Alphabet (Arabic, Chinese, Japanese, Cyrillic etc) must be complemented by an International driving license.
+Please show a valid ID card or passport at time of pick up.
+Special rental information by booking of Prepaid rates
+Changing booking
+A booking can be changed up to 48 hours before the start of the rental (on availability) in return for an alteration charge of 20.00 EUR. Any payment already made towards the rental will not be refunded; nor shall any differential amount be refunded if this alteration leads to a lesser rental cost.
+Cancellation
+A booking can be cancelled before the rental begins. In the event of cancellation, the payment in advance already made towards the rental shall be paid back subject to a cancellation charge, which will be withheld and shall be in the amount of the rental charge ( including any extras and charges) for a maximum of 3 rental days. Cancellations can be made online or in writing and must be addressed to: Sixt Poland Headquarters, Eurorent Sp. z.o.o., ul. Arabska 9, 03-977 Warszawa, Polska, Fax: +48 22 5 111 556, Email: rezerwacja@sixt.pl
+No-show
+In the event that the booked vehicle is not collected or not collected at the agreed time the rental charge already paid shall be withheld in full.
+Age Restrictions
+In Poland, the following rules apply for the minimum age and possession of a driver's license: 19 years old/1 year for vehicles in groups M***, E***, 21 years old/2 year for vehicles in groups C***, I***, 25 years old/3 years for vehicles in groups S***, F***,P***, L***, X***
+Conditions of Payment
+Flexi Tariff
+We accept all credit cards from internationally recognized credit card companies - such as American Express, Mastercard, Visa, Diners Club and JCB.
+We do not accept any prepaid cards or debit cards (Visa Electron).
+Cash Payment is not accepted.
+For the following car groups two credit cards are requested:
+FDAR, FVMR, PDAR, PTAR, LFAR, LTAR, SSAR, XDAR
+Sixt CarExpress Service card is only accepted in combination with a valid credit card.
+Prepaid Tariff
+The following credit cards are accepted: Eurocard/Mastercard, AmericanExpress Card, VISA Card, Diners Club, JCB. We do not accept any prepaid cards, debit cards (Visa Electron). The renter must be the owner of the indicated credit card. The authorised driver details and method of payment will be confirmed at reservation stage and cannot be amended. The confirmed credit card should be valid and available for presentation on collection of the vehicle. All extra costs that occur during the car rental will be charged to this credit card. By booking of a prepaid rate, the credit card will be charged before the start of rental, directly with the estimated total amount of rental. The amount that will be charged on your credit card comprises the price of rental as well as all additional extra fees. The rental charge (plus any other charges agreed such as, e.g. exemptions from liability, delivery charges, airport charges etc.) plus value added tax in the statutory amount applicable from time to time must, as a matter of principle, be paid in full for the agreed rental period, i.e. if the vehicle is collected late or returned early there shall be no refund.
+Generally
+An advance charge approval is obtained for the chosen means of payment as a security. The exact deposit is determined on collection since the amount is dependent on the vehicle.
+By booking the vehicle with delivery service the credit card will be charged in case the booking has not been cancelled or the customer did not show up. The amount that will be charged comprises the price of the rental for one day and the cost of fuel.
+Please note, that payments with credit card may require the PIN of the credit card.
+General Protection Conditions
+Third Party Insurance (TI)
+Protection coverage for the vehicle rented includes Third Party Liability with a maximum cover of 3,000,000.00 EUR for personal injuries and 600,000.00 EUR for material damages.
+Excluded from the protection is the use of the vehicle for the transport of dangerous goods. All protection as part of the rental contract will become void, in particular, if an unauthorized driver has used the vehicle or if the driver of the vehicle does not possess the required driver's license at the time of the event giving rise to claim.
+Collision Damage Waiver (CDW)
+Collision Damage Waiver removes the drivers responsibility to a part of the vehicle in case of damage.
+Exceptions of the limitation of the responsibility:
+a) Damages of wheels, windows, outside mirrors, wipers, car interior and chassis.
+b) Dirty parts of the car requiring special cleaning by removing the external layer of varnish (eg. through drops of asphalt).
+The cost of CDW is as follows: see table
+If CDW is not accepted, the customer will be held liable for the full value of the car. If CDW is accepted, the customer is only responsible for the following amounts:
+400.00 EUR (MCMR, MTMR, MDMR, EDMR, CCCC)
+700.00 EUR (CDAE, CDMR, CDAR, CLMR, CLAR, CWMR, CWAR, ILMR, ILAR, IFMR, IFAR, IDMR, IWMR)
+1000.00 EUR (SDMR, SDAR, SWMR, SWAR, SFAR, SSAR, SVMR)
+1200.00 EUR (FDAR, FFMR, FFAR, FVMR, PDAR, PTAR)
+2000.00 EUR (LTAR, LFAR, XDAR)
+Top Cover CDW
+If CDW is already included in the rates, the renter can choose Top Cover CDW to reduce/eliminate the Non-Waiverable Responsibility.
+Exceptions of the limitation of the responsibility:
+a) Damages of wheels, windows, outside mirrors, wipers, car interior and chassis.
+b) Dirty parts of the car requiring special cleaning by removing the external layer of varnish (eg. through drops of asphalt).
+The cost of Top Cover CDW is as follows: see table
+If Top Cover CDW is accepted, customer is only responsible for the following amounts:
+200.00 EUR (MCMR, MTMR, MDMR, EDMR)
+300.00 EUR (CCCC, CDAE, CDMR, CDAR, CLMR, CLAR, CWMR, CWAR, ILMR, ILAR, IFMR, IFAR, IDMR, IWMR)
+400.00 EUR (SDMR, SDAR, SWMR, SWAR, SFAR, SSAR, SVMR, FDAR, FFMR, FFAR, FVMR, PDAR, PTAR)
+600.00 EUR (LTAR, LFAR, XDAR)
+Super Top Cover CDW
+If CDW is already included in the rates, the renter can choose Super Top Cover CDW to eliminate the Non-Waiverable Responsibility.
+Exceptions of the limitation of the responsibility: a) Damages of wheels, windows, outside mirrors, wipers, car interior and chassis. b) Dirty parts of the car requiring special cleaning by removing the external layer of varnish (eg. through drops of asphalt).
+If Super Top Cover CDW is accepted, customer is only responsible for the following amounts: 0.00 EUR
+The cost of Super Top Cover CDW is as follows: see table below
+Theft Protection (TP)
+Theft Protection removes the drivers responsibility to a part of the vehicle in case of theft.
+If TP is not accepted, the customer will be held liable for the full value of the car. If TP is accepted, the customer is only responsible for the following amounts (NWR):
+400.00 EUR (MCMR, MTMR, MDMR, EDMR, CCCC)
+700.00 EUR (CDAE, CDMR, CDAR, CLMR, CLAR, CWMR, CWAR, ILMR, ILAR, IFMR, IFAR, IDMR, IWMR)
+1000.00 EUR (SDMR, SDAR, SWMR, SWAR, SFAR, SSAR, SVMR)
+1200.00 EUR (FDAR, FFMR, FFAR, FVMR, PDAR, PTAR)
+2000.00 EUR (LTAR, LFAR, XDAR)
+Personal Accident Protection (PAI)
+By taking out personal accident protection can also be extended to cover the consequences of an accident.
+Tire and Glass Coverage (GT)
+Tire and Glass Coverage provides cover against the consequences of damages on tires and windscreen.
+If GT is not accepted the customer will be held liable for the full value of damages on tires and windscreen.
+If GT is accepted, customer is only responsible for the following amounts: 0.00 EUR.
+</blockquote>
+</div>
+</div>
 {% endblock %}

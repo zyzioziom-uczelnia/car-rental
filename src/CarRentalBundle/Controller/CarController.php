@@ -30,14 +30,18 @@ class CarController extends Controller
       return $this->render('CarRentalBundle:Car:show.html.twig', array('car' => $car));
     }
 
-    public function rentAction()
+    public function rentAction($id)
     {
-        return $this->render('CarRentalBundle:Car:rent.html.twig', array(
-            // ...
-        ));
+      // get car table
+      $repository = $this->getDoctrine()->getRepository('CarRentalBundle:Car');
+      // find car with id
+      $car = $repository->find($id);
+
+      return $this->render('CarRentalBundle:Car:rent.html.twig', array('car' => $car));
     }
 
     public function createAction($name, $type, $color, $horsepower, $photo)
+    // example url: create/Volvo/SUV/blue/140/none
     {
       // create new car
       $car = new Car();
