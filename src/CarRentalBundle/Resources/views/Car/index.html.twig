@@ -1,0 +1,14 @@
+{% extends "::base.html.twig" %}
+
+{% block body %}
+
+  {% for car in cars %}
+    <div class="col s4">
+      <p>{{ car.id }}</p>
+      <p>{{ car.name }}</p>
+      <a href="car/{{car.id}}"><p class="btn">Rent this car!</p></a>
+      <hr/>
+    </div>
+  {% endfor %}
+
+{% endblock %}

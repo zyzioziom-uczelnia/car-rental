@@ -1,3 +1,15 @@
 car_rental_homepage:
     path:     /
-    defaults: { _controller: CarRentalBundle:Default:index }
+    defaults: { _controller: CarRentalBundle:Car:index }
+
+index:
+    path:     /
+    defaults: { _controller: CarRentalBundle:Car:index }
+
+show:
+    path:     /car/{id}
+    defaults: { _controller: CarRentalBundle:Car:show }
+
+rent:
+    path:     /rent/{id}
+    defaults: { _controller: CarRentalBundle:Car:rent }
