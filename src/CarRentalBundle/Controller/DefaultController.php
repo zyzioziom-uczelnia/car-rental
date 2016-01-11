@@ -10,6 +10,9 @@ class DefaultController extends Controller
 {
     public function indexAction()
     {
+      $repository = $this->getDoctrine()->getRepository('CarRentalBundle:Car');
+      $cars = $repository->findAll();
+
         // create new car
         // $car = new Car();
         // $car -> setName('Ford Mustang');
@@ -24,6 +27,6 @@ class DefaultController extends Controller
         // $em->flush();
 
         // return new Response("Created new car with id ".$car->getID()." Name: ".$car->getName());
-        return $this->render('CarRentalBundle:Default:index.html.twig', array('car' => $car));
+        return $this->render('CarRentalBundle:Default:index.html.twig', array('cars' => $cars));
     }
 }
