@@ -13,3 +13,7 @@ show:
 rent:
     path:     /rent/{id}
     defaults: { _controller: CarRentalBundle:Car:rent }
+
+create:
+    path:     /create/{name}/{type}/{color}/{horsepower}/{photo}
+    defaults: { _controller: CarRentalBundle:Car:create }

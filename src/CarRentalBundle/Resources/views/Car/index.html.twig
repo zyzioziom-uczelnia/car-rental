@@ -4,9 +4,10 @@
 
   {% for car in cars %}
     <div class="col s4">
-      <p>{{ car.id }}</p>
-      <p>{{ car.name }}</p>
-      <a href="car/{{car.id}}"><p class="btn">Rent this car!</p></a>
+      <a href="car/{{car.id}}">
+        <p>{{ car.photo }}</p>
+        <p class="btn">{{ car.name }}</p>
+      </a>
       <hr/>
     </div>
   {% endfor %}

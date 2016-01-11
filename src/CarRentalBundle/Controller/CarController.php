@@ -3,6 +3,8 @@
 namespace CarRentalBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Component\HttpFoundation\Response;
+use CarRentalBundle\Entity\Car;
 
 class CarController extends Controller
 {
@@ -33,6 +35,24 @@ class CarController extends Controller
         return $this->render('CarRentalBundle:Car:rent.html.twig', array(
             // ...
         ));
+    }
+
+    public function createAction($name, $type, $color, $horsepower, $photo)
+    {
+      // create new car
+      $car = new Car();
+      $car -> setName($name);
+      $car -> setType($type);
+      $car -> setHorsepower($horsepower);
+      $car -> setColor($color);
+      $car -> setPhoto($photo);
+
+      $em = $this->getDoctrine()->getManager();
+
+      $em->persist($car);
+      $em->flush();
+
+      return new Response(var_dump($car));
     }
 
 }
